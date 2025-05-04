@@ -379,7 +379,7 @@ display:
         // Weather section
         it.printf(base_x, base_y, id(font_title), color_text, TextAlign::TOP_CENTER, "WEATHER");
 
-        it.printf(100, 178, id(font_mdi_large), color_text, TextAlign::TOP_CENTER, "%s", weather_icon_map[id(weather_state).state.c_str()].c_str());
+        it.printf(114, 178, id(font_mdi_large), color_text, TextAlign::TOP_CENTER, "%s", weather_icon_map[id(weather_state).state.c_str()].c_str());
 
         it.printf(168, 168, id(font_large_bold), color_text, "%2.1f°C", id(weather_temperature).state);
 
@@ -414,15 +414,15 @@ display:
         // show current song if music is playing
         if (isPlaying){
           if (song.length() > 35) {
-            it.printf(music_base_x, music_base_y + music_content_offset_y, id(font_small_bold), color_text, TextAlign::TOP_CENTER, "%s", song);
+            it.printf(music_base_x, music_base_y + music_content_offset_y, id(font_small_bold), color_text, TextAlign::TOP_CENTER, "%s", song.c_str());
           } else {
-            it.printf(music_base_x, music_base_y + music_content_offset_y, id(font_medium_bold), color_text, TextAlign::TOP_CENTER, "%s", song);
+            it.printf(music_base_x, music_base_y + music_content_offset_y, id(font_medium_bold), color_text, TextAlign::TOP_CENTER, "%s", song.c_str());
           }
 
           if (artist.length() > 35) {
-            it.printf(music_base_x, music_base_y + music_content_offset_y + music_linebreak_y, id(font_small_bold), color_text, TextAlign::TOP_CENTER, "by %s", artist);
+            it.printf(music_base_x, music_base_y + music_content_offset_y + music_linebreak_y, id(font_small_bold), color_text, TextAlign::TOP_CENTER, "by %s", artist.c_str());
           } else {
-            it.printf(music_base_x, music_base_y + music_content_offset_y + music_linebreak_y, id(font_medium_bold), color_text, TextAlign::TOP_CENTER, "by %s", artist);
+            it.printf(music_base_x, music_base_y + music_content_offset_y + music_linebreak_y, id(font_medium_bold), color_text, TextAlign::TOP_CENTER, "by %s", artist.c_str());
           }
         }
         else{
@@ -431,16 +431,16 @@ display:
 
         // Multiple infos with icon
         // General settings
-        uint multi_info_base_x = 80;
+        uint multi_info_base_x = 78;
         uint text_offset_x = 48;
-        uint tab_offset_x = 170;
+        uint tab_offset_x = 172;
         uint multi_info_base_y = music_base_y + 220;
         uint text_offset_y = 4;
         uint linebreak_offset_y = 60;
 
         // IAQ value
         it.printf(multi_info_base_x, multi_info_base_y, id(font_mdi_medium), color_text, "\U000F029A");
-        it.printf(multi_info_base_x + text_offset_x, multi_info_base_y + text_offset_y, id(font_medium_bold), color_text, "%.0f%IAQ", id(indoor_iaq).state);
+        it.printf(multi_info_base_x + text_offset_x, multi_info_base_y + text_offset_y, id(font_medium_bold), color_text, "%.0f IAQ", id(indoor_iaq).state);
 
         // Indoor temperature
         it.printf(multi_info_base_x, multi_info_base_y + linebreak_offset_y, id(font_mdi_medium), color_text, "\U000F0F54");
