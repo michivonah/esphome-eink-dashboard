@@ -2,7 +2,8 @@
 
 A simple dashboard with weather data, current playing music & data from Home Assistant for ESPHome.
 
-> TODO: add some images
+![Dashboard Example 1](https://github.com/user-attachments/assets/002c1605-2a43-46b6-b78e-b336aa5685a1)
+![Dashboard Example 2](https://github.com/user-attachments/assets/d483e0ec-5a82-468d-98d3-7df261c97e6e)
 
 ## Required hardware
 
