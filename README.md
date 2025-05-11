@@ -32,7 +32,7 @@ In the center of the screen the current playing media of one or more speakers ca
 At the bottom you find some stats of your Home Assistant instance that you can adjust.
 
 ## Intelligent Screen Refreshing
-To reduce the frequency of screen refreshes and to prolong the life of the e-ink screen, the screen will now only refresh when presence is detected.
+To reduce the frequency of screen refreshes and to prolong the life of the e-ink screen, the screen will now only refresh when presence is detected and the lux in the current room is over 5 to avoid refreshing when the display's content can't be read in terms of brightness (like during night).
 
 ## Last Refreshed Timestamp
 The last update timestamp can be displayed on the screen itself. No more wondering when the screen was last refreshed!
