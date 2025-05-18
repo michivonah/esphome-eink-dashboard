@@ -17,8 +17,8 @@ A simple dashboard with weather data, current playing music & data from Home Ass
 
 ## Installation
 
-1. No soldering is required since the e-Paper driver board was integrated into the ESP32 board. All you need to do was to connect the e-Paper screen to the driver board, and then connect the driver board to the USB socket on my light switch.
-1. Copy `/fonts` and `weatherman.yaml` to your /.config/esphome folder and adjust it your needs.
+1. No soldering is required since the e-Paper driver board was integrated into the ESP32 board. All you need to do is to connect the e-Paper screen to the driver board, and then connect the driver board to power via USB.
+1. Copy `/fonts` and `e-ink-frame.yaml` to your /.config/esphome folder and adjust it your needs.
 1. Flash the configuration to your ESP32 driver board via [ESPHome Web](https://web.esphome.io/)
 1. Enjoy!
 
